@@ -20,6 +20,15 @@ public class QuestionSO : ScriptableObject
        return strQuestion;
    } // GetQUestionSO()
 
+   public int GetCorrectAnswerIndex()
+   {
+       return intCorrectAnswerIndex;
+   } // GetCorrectAnswerIndex
+
+    public string GetAnswer(int intIndex )
+    {
+        return strAnswers[intIndex]; 
+    }
 
    
 } // QuestionSO

@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &19575815 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5775794386236799989, guid: fe5e7898781a02641973914537819b01, type: 3}
+  m_PrefabInstance: {fileID: 1172012402}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &36821136
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,6 +305,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 77881945}
   m_CullTransparentMesh: 1
+--- !u!1 &368906893 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5775794386236799989, guid: fe5e7898781a02641973914537819b01, type: 3}
+  m_PrefabInstance: {fileID: 1360805641}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,6 +604,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1034789165}
   m_CullTransparentMesh: 1
+--- !u!1 &1055589077 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5775794386236799989, guid: fe5e7898781a02641973914537819b01, type: 3}
+  m_PrefabInstance: {fileID: 5775794386813974816}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1055589078 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5775794386236799990, guid: fe5e7898781a02641973914537819b01, type: 3}
@@ -957,6 +972,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questionText: {fileID: 1119263886}
   question: {fileID: 11400000, guid: b8a5f6f090cd87b4facc1995a8748190, type: 2}
+  goAnswerButtons:
+  - {fileID: 1055589077}
+  - {fileID: 19575815}
+  - {fileID: 1301078760}
+  - {fileID: 368906893}
+--- !u!1 &1301078760 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5775794386236799989, guid: fe5e7898781a02641973914537819b01, type: 3}
+  m_PrefabInstance: {fileID: 1408279861}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1360805641
 PrefabInstance:
   m_ObjectHideFlags: 0
