@@ -14,3 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strQuestion: When working with colors, what is the effect of changing  the alpha
     value to zero?
+  intCorrectAnswerIndex: 3
+  strAnswers:
+  - Turns everything to green
+  - Doubles the intensity of the colors
+  - Turns everything purple
+  - Makes them completely transparent

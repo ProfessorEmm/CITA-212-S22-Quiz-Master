@@ -10,6 +10,11 @@ public class QuestionSO : ScriptableObject
    //SerializeField allows us to access this in the Inspector, but not access it form other scripts
    [SerializeField] string strQuestion = "Enter new question text here.";
 
+   [SerializeField] int intCorrectAnswerIndex;
+
+   // where we will store our answers
+   [SerializeField] string[] strAnswers = new string[4];
+
    public string GetQuestion()
    {
        return strQuestion;

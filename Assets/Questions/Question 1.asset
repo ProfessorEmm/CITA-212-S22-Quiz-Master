@@ -13,3 +13,8 @@ MonoBehaviour:
   m_Name: Question 1
   m_EditorClassIdentifier: 
   strQuestion: What are game mechanics?
+  strAnswers:
+  - Rules that govern & guide the player's actions
+  - The mechanical devices used in games.
+  - An NPC who fixes mechanical problems.
+  - The person who fixes problems with games.
