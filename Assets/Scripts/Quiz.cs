@@ -6,25 +6,60 @@ using UnityEngine.UI;
 
 public class Quiz : MonoBehaviour
 {
+    [Header("Questions")]
     // TextMeshProUGUI is used for text within the UI
     [SerializeField] TextMeshProUGUI questionText;
     [SerializeField] QuestionSO question;
+
+    [Header("Answers")]
     [SerializeField   ] GameObject[] goAnswerButtons;
     int intCorrectAnswerIndex;
+    bool blHasAnsweredEarly;
+
+    [Header("Button Colors")]
     [SerializeField] Sprite sprDefaultAnswerSprite;
-    [SerializeField] Sprite sprCorrectAnswerSprite; 
+    [SerializeField] Sprite sprCorrectAnswerSprite;
+
+    [Header("Timer")]
+    [SerializeField] Image timerImage;
+    Timer timer;
     void Start()
     {
-       GetNextQuestion(); 
+        timer = FindObjectOfType<Timer>();
+        GetNextQuestion(); 
        // DisplayQuestion();
     } // Start
 
+    void Update()
+    {
+        timerImage.fillAmount = timer.fltFillFraction;
+        if (timer.blLoadNextQuestion)
+        {
+            blHasAnsweredEarly = false;
+            GetNextQuestion();
+            timer.blLoadNextQuestion = false;
+        }
+        else if (!blHasAnsweredEarly && ! timer.blIsAnsweringQuestion)
+        {
+            DisplayAnswer(-1 );
+            SetButtonState(false);
+        }
+    }
 
     public void OnAnswerSelected(int index)
     {
+        blHasAnsweredEarly = true;
+        DisplayAnswer(index);
+        SetButtonState(false);
+        timer.CancelTimer();  // Once we've selected an answer, we want to 
+                              // put it into it's next state
+    } // OnAnswerSelected()
+
+    void DisplayAnswer(int index)
+    {
         Image buttonImage;
 
-        if(index == question.GetCorrectAnswerIndex())
+        if (index == question.GetCorrectAnswerIndex())
         {
             questionText.text = "Correct!";
             buttonImage = goAnswerButtons[index].GetComponent<Image>();
@@ -39,8 +74,7 @@ public class Quiz : MonoBehaviour
             buttonImage.sprite = sprCorrectAnswerSprite;
         }
 
-        SetButtonState(false);
-    } // OnAnswerSelected()
+    } // Display Answer()
 
     void GetNextQuestion()
     {
