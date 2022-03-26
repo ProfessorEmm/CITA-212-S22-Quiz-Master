@@ -15,14 +15,10 @@ public class Quiz : MonoBehaviour
     [SerializeField] Sprite sprCorrectAnswerSprite; 
     void Start()
     {
-        questionText.text = question.GetQuestion();
-
-        for(int i = 0; i < goAnswerButtons.Length; i++)
-        {
-            TextMeshProUGUI buttonText = goAnswerButtons[i].GetComponentInChildren<TextMeshProUGUI>();
-            buttonText.text = question.GetAnswer(i);
-        }     
+       GetNextQuestion(); 
+       // DisplayQuestion();
     } // Start
+
 
     public void OnAnswerSelected(int index)
     {
@@ -42,7 +38,45 @@ public class Quiz : MonoBehaviour
             buttonImage = goAnswerButtons[intCorrectAnswerIndex].GetComponent<Image>();
             buttonImage.sprite = sprCorrectAnswerSprite;
         }
+
+        SetButtonState(false);
     } // OnAnswerSelected()
+
+    void GetNextQuestion()
+    {
+        SetButtonState(true);
+        SetDefaultButtonSprites();
+        DisplayQuestion();
+    } // GetNextQuestion()
+
+    void DisplayQuestion()
+    {
+        questionText.text = question.GetQuestion();
+
+        for(int i = 0; i < goAnswerButtons.Length; i++)
+        {
+            TextMeshProUGUI buttonText = goAnswerButtons[i].GetComponentInChildren<TextMeshProUGUI>();
+            buttonText.text = question.GetAnswer(i);
+        }
+    } // DisplayQuestion()
+
+    void SetButtonState(bool blState)
+    {
+        for(int i = 0; i < goAnswerButtons.Length; i++)
+        {
+            Button btnButton = goAnswerButtons[i].GetComponent<Button>();
+            btnButton.interactable = blState;
+        }
+    } // SetButtonState
+
+    void SetDefaultButtonSprites()
+    {
+        for(int i = 0; i < goAnswerButtons.Length; i++)
+        {
+            Image buttonImage = goAnswerButtons[i].GetComponent<Image>();
+            buttonImage.sprite = sprDefaultAnswerSprite;
+        }
+    }
 
     
 } // Quiz
