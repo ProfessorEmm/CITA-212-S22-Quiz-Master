@@ -674,8 +674,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f70e26c0b27043e498d41985555e3c86, type: 2}
+  m_sharedMaterial: {fileID: 777222258113916120, guid: f70e26c0b27043e498d41985555e3c86, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -888,6 +888,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: QuestionText
       objectReference: {fileID: 0}
+    - target: {fileID: 5775794386428663603, guid: fe5e7898781a02641973914537819b01, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 5775794386428663603, guid: fe5e7898781a02641973914537819b01, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe5e7898781a02641973914537819b01, type: 3}
 --- !u!224 &1172012403 stripped
@@ -1012,7 +1020,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionText: {fileID: 1119263886}
-  question: {fileID: 11400000, guid: b8a5f6f090cd87b4facc1995a8748190, type: 2}
+  questions:
+  - {fileID: 11400000, guid: b8a5f6f090cd87b4facc1995a8748190, type: 2}
+  - {fileID: 11400000, guid: 32b0f941a47830a4887af1542429f8f4, type: 2}
+  - {fileID: 11400000, guid: ce536e253a3414f45a61483dba0b2cd6, type: 2}
+  - {fileID: 11400000, guid: ba9f66275c550c847a8bbaaedc006f32, type: 2}
   goAnswerButtons:
   - {fileID: 1055589077}
   - {fileID: 19575815}
@@ -1165,6 +1177,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: QuestionText
       objectReference: {fileID: 0}
+    - target: {fileID: 5775794386428663603, guid: fe5e7898781a02641973914537819b01, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 5775794386428663603, guid: fe5e7898781a02641973914537819b01, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe5e7898781a02641973914537819b01, type: 3}
 --- !u!224 &1360805642 stripped
@@ -1311,6 +1331,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: QuestionText
       objectReference: {fileID: 0}
+    - target: {fileID: 5775794386428663603, guid: fe5e7898781a02641973914537819b01, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 5775794386428663603, guid: fe5e7898781a02641973914537819b01, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe5e7898781a02641973914537819b01, type: 3}
 --- !u!224 &1408279862 stripped
@@ -1815,5 +1843,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: QuestionText
       objectReference: {fileID: 0}
+    - target: {fileID: 5775794386428663603, guid: fe5e7898781a02641973914537819b01, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 5775794386428663603, guid: fe5e7898781a02641973914537819b01, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe5e7898781a02641973914537819b01, type: 3}

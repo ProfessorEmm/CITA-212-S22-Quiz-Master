@@ -18,7 +18,7 @@ public class QuestionSO : ScriptableObject
    public string GetQuestion()
    {
        return strQuestion;
-   } // GetQUestionSO()
+   } // GetQuestionSO()
 
    public int GetCorrectAnswerIndex()
    {
